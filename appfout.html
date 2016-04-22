@@ -1,5 +1,5 @@
 <!doctype html>
-<html manifest="manifest.appcache">
+<html manifest="manifest.appcache" class="wf-loading">
   <head>
     <link rel="dns-prefetch" href="//fonts.googleapis.com/">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -8,10 +8,11 @@
     <title>FOIT FOUT fix</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
-     html *, .wf-loading * {
+     .wf-loading body {
        opacity: 0;
      }
-     .wf-active *, .wf-inactive * {
+     .wf-active body, .wf-inactive body {
+       opacity: 1;
        transition: opacity .1s ease-out;
      }
      h1 {
