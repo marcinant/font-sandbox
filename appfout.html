@@ -9,23 +9,9 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <style>
      .wf-loading * {
-       
-       /*
-	  first things first, we need to hide everything,
-	  but bear in mind that this will only take effect
-	  once the loading script has taken effect.
-	  here we're hiding all content within
-	  the <html> once it has the class "wf-loading"
-	*/
        opacity: 0;
      }
-     .wf-active *, 
-     .wf-inactive * {
-       /*
-	  add some transitional effects
-	  to reintroduce the content
-	  gradually once fonts are loaded
-	/*
+     .wf-active *, .wf-inactive * {
        transition: opacity .1s ease-out;
      }
      h1 {
@@ -46,7 +32,6 @@
        width: 100%;
        background-color: green;
      }
-
     </style>
   </head>
   <body>
