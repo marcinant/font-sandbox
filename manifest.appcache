@@ -5,4 +5,6 @@ NETWORK:
  
 CACHE:
 assets/script/main.js
+assets/script/vendor/jquery.min.js
 http://fonts.googleapis.com/css?family=Bonbon
+https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js
