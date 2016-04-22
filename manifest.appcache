@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# v1
+NETWORK:
+*
+ 
+CACHE:
+css/main.css
+fonts/fontawesome-webfont.eot?v=4.0.3
+fonts/fontawesome-webfont.eot?#iefix&v=4.0.3
+fonts/fontawesome-webfont.woff?v=4.0.3
+fonts/fontawesome-webfont.ttf?v=4.0.3
+fonts/fontawesome-webfont.svg?v=4.0.3
+js/myjs.js
+http://fonts.googleapis.com/css?family=Bonbon
