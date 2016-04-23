@@ -5,6 +5,7 @@ NETWORK:
  
 CACHE:
 assets/scripts/main.js
+assets/scripts/main2.js
 assets/scripts/vendor/webfontloader.js
 assets/scripts/vendor/jquery.min.js
 assets/scripts/vendor/bootstrap.min.js
