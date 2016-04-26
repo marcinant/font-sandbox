@@ -1,0 +1,75 @@
+* Font Sandbox
+  :PROPERTIES:
+  :CREATED:  [2016-04-26 Tue 02:02]
+  :END:
+
+  Problems to fix: 
+
+  FOIT -> Flash of Invisible Text
+
+  FOUC -> Flash of Unstyled Content
+  FOUT -> Flash of Unstyled Text
+
+** Fixing FOUT and FOIT with Google Fonts
+   :PROPERTIES:
+   :CREATED:  [2016-04-26 Tue 02:06]
+   :END:
+  
+   The only way to fix both issues is to inline CSS containing font-face
+   definition in <head> tag as url or as base64.
+
+   This solution however has some weak points.
+
+*** Max size of inline CSS should not exceed 100kb (2 cycles)
+    :PROPERTIES:
+    :CREATED:  [2016-04-26 Tue 02:09]
+    :END:
+    https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent
+
+    So, we actually cannot put more than one font.
+
+*** Multiple formats
+    :PROPERTIES:
+    :CREATED:  [2016-04-26 Tue 02:10]
+    :END:
+
+    All modern browsers support woff. Woff2 is supported by Chrome and
+    FFox. What about eol, truetype and svg?
+
+*** Fonts are loaded on each request on dynamic pages
+    :PROPERTIES:
+    :CREATED:  [2016-04-26 Tue 02:11]
+    :END:
+   
+    As they are inlined they are loaded on each request. This is not good.
+
+*** No user-agent detection
+    :PROPERTIES:
+    :CREATED:  [2016-04-26 Tue 02:13]
+    :END:
+
+    Google fonts loaded with <link> or @import statements use user-agent
+    detection.
+
+** Better approach
+   :PROPERTIES:
+   :CREATED:  [2016-04-26 Tue 02:12]
+   :END:
+
+*** Accept FOUT
+    :PROPERTIES:
+    :CREATED:  [2016-04-26 Tue 02:12]
+    :END:
+
+    We should learn to live with FOUT and fix it with CSS.
+    With this solution we can use WebFontLoaded to fetch CSS containing
+    font-face declaration.
+
+    + We still got user-agent detection
+    + We still use Google CDN and fonts are downloaded asynchronously
+    + Fonts are cached by browser
+    + FOUT is visible on each request(!)
+    + We should hide text (with CSS) until fonts are loaded
+    + 100 pkt in PageSpeed Insights
+
+    + We can cache CSS with Webapp Cache and... Service Workers
