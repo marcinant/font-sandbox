@@ -29,36 +29,36 @@
 
     <!-- Fallback application metadata for legacy browsers -->
     <meta name="application-name" content="Font Sandbox">
-    <link rel="icon" sizes="16x16 32x32 48x48" href="lo_def.ico">
-    <link rel="icon" sizes="512x512" href="hi_def.png">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="assets/images/favicon.ico">
+    <link rel="icon" sizes="512x512" href="assets/images/touch/apple-touch-icon.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/touch/apple-touch-icon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="assets/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#2F3BA2">
 
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2F3BA2">
 
     <!-- Open Graph -->
-    <meta property=og:title content="Air Horn">
+    <meta property=og:title content="Font Sandbox">
     <meta property=og:type content=website>
-    <meta property=og:image content=https://airhorner.com/images/touch/Airhorner_192.png>
-    <meta property=og:url content="https://airhorner.com/">
+    <meta property=og:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta property=og:url content="https://marcinant.github.io/font-sandbox">
     <meta property=og:description content="The best and easiest Air Horn web app there!">
 
     
     <meta name=twitter:card content=summary>
-    <meta name=twitter:url content="https://airhorner.com/">
-    <meta name=twitter:title content="Air Horn">
+    <meta name=twitter:url content="https://marcinant.github.io/font-sandbox">
+    <meta name=twitter:title content="Font Sandbox">
     <meta name=twitter:description content="The best and easiest Air Horn web app there!">
-    <meta name=twitter:image content=https://airhorner.com/images/touch/Airhorner_192.png>
-    <meta name=twitter:creator content=@paul_kinlan>
+    <meta name=twitter:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta name=twitter:creator content=@neutrico>
 
     <script type="application/ld+json">
   {
@@ -138,7 +138,7 @@
      
      if('serviceWorker' in navigator) {
        navigator.serviceWorker
-		.register('/sw.js', {scope: '/'})
+		.register('/assets/scripts/sw.js', {scope: '/'})
 		.then(function() { console.log("Service Worker Registered"); });
        
        navigator.serviceWorker.ready.then(function(registration) { 
