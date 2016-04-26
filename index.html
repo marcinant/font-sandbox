@@ -138,7 +138,7 @@
      
      if('serviceWorker' in navigator) {
        navigator.serviceWorker
-		.register('assets/scripts/sw.js')
+		.register('sw.js')
 		.then(function(reg) { console.log("Service Worker Registered" + reg.scope); });
        
        navigator.serviceWorker.ready.then(function(registration) { 
