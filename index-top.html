@@ -1,24 +1,83 @@
 <!doctype html>
-<html manifest="manifest.appcache" class="wf-active">
+<html manifest="manifest.appcache" class="wf-loading">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>FOIT FOUT fix</title>
+    
+    <meta name="description" content="Some description">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel="canonical" href="https://marcinant.github.io/font-sandbox/">
+    <meta name="referrer" content="origin">
+    
+    <!-- improve performance on dns request -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com/">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <title>FOIT FOUT fix</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <style>
-     /* body {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json>"
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Fallback application metadata for legacy browsers -->
+    <meta name="application-name" content="Font Sandbox">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="assets/images/favicon.ico">
+    <link rel="icon" sizes="512x512" href="assets/images/touch/apple-touch-icon.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="assets/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- Open Graph -->
+    <meta property=og:title content="Font Sandbox">
+    <meta property=og:type content=website>
+    <meta property=og:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta property=og:url content="https://marcinant.github.io/font-sandbox">
+    <meta property=og:description content="The best and easiest Air Horn web app there!">
+
+    
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:url content="https://marcinant.github.io/font-sandbox">
+    <meta name=twitter:title content="Font Sandbox">
+    <meta name=twitter:description content="The best and easiest Air Horn web app there!">
+    <meta name=twitter:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta name=twitter:creator content=@neutrico>
+
+    <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "Website",
+  "publisher": "Neutrico",
+  "url": "http://marcinant.github.io/font-sandbox/",
+  "image": "http://marcinant.github.io/font-sandbox/content/images/2016/04/photo-1434493789847-2f02dc6ca35d.jpeg",
+  "description": "Some description here"
+  }
+    </script>
+    
+    <style title="critical-css">
+     /* .wf-loading * {
+	color: transparent !important;
 	} */
-     /* .wf-active body, 
-	.wf-inactive body {
-	text-indent: 0px;
-	white-space: normal;
-	overflow: auto;
-	} */
+     .wf-active body, .wf-inactive body {
+       color: #333;
+     }
      h1 {
        border: 3px solid red;
        background-color: green;
@@ -27,19 +86,24 @@
      .wf-active h1 {
        font-family: "Bonbon";
      }
+     
      .fold {
-       height: 360px;
+       height: 60px;
        width: 100%;
        background-color: red;
      }
      .fold2 {
-       height: 360px;
+       height: 60px;
        width: 100%;
        background-color: green;
      }
 
+     .yell {
+       color: yellow;
+     }
     </style>
-    <script>/* Web Font Loader v1.6.24 - (c) Adobe Systems, Google. License: Apache 2.0 */
+    <script>
+      /* Web Font Loader v1.6.24 - (c) Adobe Systems, Google. License: Apache 2.0 */
       (function(){function aa(a,b,d){return a.call.apply(a.bind,arguments)}function ba(a,b,d){if(!a)throw Error();if(2<arguments.length){var c=Array.prototype.slice.call(arguments,2);return function(){var d=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(d,c);return a.apply(b,d)}}return function(){return a.apply(b,arguments)}}function p(a,b,d){p=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?aa:ba;return p.apply(null,arguments)}var q=Date.now||function(){return+new Date};function ca(a,b){this.a=a;this.m=b||a;this.c=this.m.document}var da=!!window.FontFace;function t(a,b,d,c){b=a.c.createElement(b);if(d)for(var e in d)d.hasOwnProperty(e)&&("style"==e?b.style.cssText=d[e]:b.setAttribute(e,d[e]));c&&b.appendChild(a.c.createTextNode(c));return b}function u(a,b,d){a=a.c.getElementsByTagName(b)[0];a||(a=document.documentElement);a.insertBefore(d,a.lastChild)}function v(a){a.parentNode&&a.parentNode.removeChild(a)}
 																	     function w(a,b,d){b=b||[];d=d||[];for(var c=a.className.split(/\s+/),e=0;e<b.length;e+=1){for(var f=!1,g=0;g<c.length;g+=1)if(b[e]===c[g]){f=!0;break}f||c.push(b[e])}b=[];for(e=0;e<c.length;e+=1){f=!1;for(g=0;g<d.length;g+=1)if(c[e]===d[g]){f=!0;break}f||b.push(c[e])}a.className=b.join(" ").replace(/\s+/g," ").replace(/^\s+|\s+$/,"")}function y(a,b){for(var d=a.className.split(/\s+/),c=0,e=d.length;c<e;c++)if(d[c]==b)return!0;return!1}
 function z(a){if("string"===typeof a.f)return a.f;var b=a.m.location.protocol;"about:"==b&&(b=a.a.location.protocol);return"https:"==b?"https:":"http:"}function ea(a){return a.m.location.hostname||a.a.location.hostname}
@@ -59,23 +123,50 @@ g,0<c.length&&(c=Aa[c[0]])&&(a.c[e]=c))}a.c[e]||(c=Aa[e])&&(a.c[e]=c);for(c=0;c<
 
     </script>
     <script>
+
+     // Service Worker registration
+     
+     if('serviceWorker' in navigator) {
+       navigator.serviceWorker
+		.register('sw.js')
+		.then(function(reg) { console.log("Service Worker Registered" + reg.scope); });
+       
+       navigator.serviceWorker.ready.then(function(registration) { 
+         console.log("Service Worker Ready");
+       });
+     }
+
+     // Google Analytics -> @TODO make this working offline
+     
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+     
+     ga('create', 'UA-59325548-2', 'auto');
+     ga('send', 'pageview');
+
+     // WebFontLoader
+     
      WebFont.load({
        google: {
 	 families: ['Bonbon']
-       },
-       // other options and settings
-       active: function() {
-	 sessionStorage.webfonts = true;
        }
      });
     </script>
-
   </head>
   <body>
+    <ul>
+      <li>FOUT on first load - hidden with CSS</li>
+      <li>No inline font on top - Google Font from Google CDN with preconnect, dns-prefetch, browser cache and user-agent detection</li>
+      <li>CSS from Google cached with AppCache (manifest)</li>
+      <li>Use Service Workers with supporting browsers Chrome 49+, Firefox 44+</li>
+    </ul>
     <div class="fold">Fold</div>
     <div class="fold2">Fold</div>    
     <h1>test bonbon</h1>
     <h1>test bonbon</h1>
+    <h1 class="yell">test bonbon</h1>
     <h1>test bonbon</h1>
     <h1>test bonbon</h1>
     <h1>test bonbon</h1>
@@ -92,10 +183,7 @@ g,0<c.length&&(c=Aa[c[0]])&&(a.c[e]=c))}a.c[e]||(c=Aa[e])&&(a.c[e]=c);for(c=0;c<
     <h1>test bonbon</h1>
     <h1>test bonbon</h1>
     <h1>test bonbon</h1>
-    <h1>test bonbon</h1>
-    <!-- <script src="assets/scripts/vendor/webfontloader.js"></script> -->
-    <script src="assets/scripts/vendor/jquery.min.js"></script>
-    <script src="assets/scripts/vendor/bootstrap.min.js"></script>
-    <script src="assets/scripts/main.js"></script>    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script> -->
+    
   </body>
 </html>
