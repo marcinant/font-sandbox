@@ -138,7 +138,7 @@
      
      if('serviceWorker' in navigator) {
        navigator.serviceWorker
-		.register('/assets/scripts/sw.js', {scope: '/'})
+		.register('assets/scripts/sw.js', {scope: '/'})
 		.then(function() { console.log("Service Worker Registered"); });
        
        navigator.serviceWorker.ready.then(function(registration) { 
