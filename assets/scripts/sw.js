@@ -6,7 +6,7 @@ self.addEventListener('install', function(e) {
       return cache.addAll([
         '/',
         '/index.html',
-        'http://fonts.gstatic.com/s/bonbon/v7/9Y-vWjaZMFbrz3brizYoHQ.woff2'
+        'https://fonts.gstatic.com/s/bonbon/v7/9Y-vWjaZMFbrz3brizYoHQ.woff2'
       ]).then(function() {
         return self.skipWaiting();
       });
