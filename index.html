@@ -109,7 +109,7 @@
       <li>No inline font on top - Google Font from Google CDN with preconnect, dns-prefetch, browser cache and user-agent detection</li>
       <li>CSS from Google cached with AppCache (manifest)</li>
       <li>Use Service Workers with supporting browsers Chrome 49+, Firefox 44+</li>
-    <ul>
+    </ul>
     <div class="fold">Fold</div>
     <div class="fold2">Fold</div>    
     <h1>test bonbon</h1>
@@ -138,7 +138,7 @@
      
      if('serviceWorker' in navigator) {
        navigator.serviceWorker
-		.register('assets/scripts/sw.js', {scope: '../'})
+		.register('assets/scripts/sw.js')
 		.then(function(reg) { console.log("Service Worker Registered" + reg.scope); });
        
        navigator.serviceWorker.ready.then(function(registration) { 
