@@ -167,12 +167,14 @@
      // Google Analytics -> @TODO make this working offline
 
      var x = navigator.userAgent,
-	 e = document.getElementById("fold2");
+	 e = document.getElementById("fold2"),
+	 s = navigator.userAgent;
 
-     e.innerHTML = x;
+     console.log(s.indexOf('Speed Insights'));
 
-     
-
+     if ( s.indexOf('Speed Insights') > -1) {
+       e.innerHTML = x;
+     }
        
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
