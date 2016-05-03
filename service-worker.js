@@ -27,11 +27,11 @@
 
 
 
-importScripts("assets/scripts/vendor/sw-toolbox.js","assets/scripts/vendor/runtime-caching.js");
+importScripts("assets/scripts/vendor/sw-toolbox.min.js","assets/scripts/vendor/runtime-caching.min.js");
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["assets/images/test.png","29cd71b7503223412af0739f56c8d7f7"],["assets/images/wp.png","dd48b1044a90d0c196d98a369e2fe62d"],["assets/scripts/main.js","792b8989989d26d887e4fef5fb5defda"],["assets/scripts/vendor/bootstrap.min.js","c5b5b2fa19bd66ff23211d9f844e0131"],["assets/scripts/vendor/jquery.min.js","33cabfa15c1060aaa3d207c653afb1ee"],["assets/scripts/vendor/runtime-caching.js","a56084c1d7dc8e5be9ef6e7b7fb1338c"],["assets/scripts/vendor/sw-toolbox.js","42dd9073ba0a0c8e0ae2230432870678"],["assets/styles/fonts.css","b783b43215d5d7393f08bba1224961d7"],["assets/styles/main.css","494a73bfd3b3cee3a75d96449f979a08"],["index.html","168a468c7f36cf0e81a7680f86833eac"],["manifest.json","0e9bd756acb9c618f360c0412da46dc8"]];
+var PrecacheConfig = [["dev/doc/assets/images/wp.png","dd48b1044a90d0c196d98a369e2fe62d"],["dev/doc/assets/scripts/main.js","a53d065e146894b587705a4ae28b1314"],["dev/doc/assets/scripts/main.min.js","e1a3f7aeddba393521a83e9a639f5cee"],["dev/doc/assets/styles/fonts.css","b783b43215d5d7393f08bba1224961d7"],["dev/doc/assets/styles/main.css","ef87bb6604b0b2ec9d51d1b2df3d7b2b"],["dev/doc/index.html","224c78fe08e063132c0b44fa5cfc3c68"],["dev/doc/manifest.json","0e9bd756acb9c618f360c0412da46dc8"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-doc-sandbox-' + (self.registration ? self.registration.scope : '') + '-';
 
