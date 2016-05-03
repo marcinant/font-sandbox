@@ -1,0 +1,178 @@
+<!doctype html>
+<html manifest="manifest.appcache" class="wf-loading">
+  <head>
+    <script>
+     (function() {
+       var isLocalhost = Boolean(window.location.hostname === 'localhost' ||
+				 window.location.hostname === '[::1]' ||
+				 window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+       if (window.location.protocol === 'http:' && !isLocalhost) {
+         window.location.protocol = 'https:';
+       }
+     })();
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>FOIT FOUT fix</title>
+    
+    <meta name="description" content="Some description">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <link rel="canonical" href="https://marcinant.github.io/font-sandbox/">
+    <meta name="referrer" content="origin">
+    
+    <!-- improve performance on dns request -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json>"
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Fallback application metadata for legacy browsers -->
+    <meta name="application-name" content="Font Sandbox">
+    <link rel="icon" sizes="16x16 32x32 48x48" href="assets/images/favicon.ico">
+    <link rel="icon" sizes="512x512" href="assets/images/touch/apple-touch-icon.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="assets/images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- Open Graph -->
+    <meta property=og:title content="Font Sandbox">
+    <meta property=og:type content=website>
+    <meta property=og:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta property=og:url content="https://marcinant.github.io/font-sandbox">
+    <meta property=og:description content="The best and easiest Air Horn web app there!">
+
+    
+    <meta name=twitter:card content=summary>
+    <meta name=twitter:url content="https://marcinant.github.io/font-sandbox">
+    <meta name=twitter:title content="Font Sandbox">
+    <meta name=twitter:description content="The best and easiest Air Horn web app there!">
+    <meta name=twitter:image content=https://marcinant.github.io/font-sandbox/assets/images/touch/chrome-touch-icon-192x192.png>
+    <meta name=twitter:creator content=@neutrico>
+
+    <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "Website",
+  "publisher": "Neutrico",
+  "url": "http://marcinant.github.io/font-sandbox/",
+  "image": "http://marcinant.github.io/font-sandbox/content/images/2016/04/photo-1434493789847-2f02dc6ca35d.jpeg",
+  "description": "Some description here"
+  }
+    </script>
+    
+    <style title="critical-css">
+     .wf-loading * {
+       color: transparent !important;
+     }
+     .wf-active body, .wf-inactive body {
+       color: #333;
+     }
+     h1 {
+       border: 3px solid red;
+       background-color: green;
+       font-family: sans-serif;
+     }
+     .wf-active h1 {
+       font-family: "Bonbon";
+     }
+     
+     .fold {
+       height: 60px;
+       width: 100%;
+       background-color: red;
+     }
+     .fold2 {
+       height: 60px;
+       width: 100%;
+       background-color: green;
+     }
+
+     .yell {
+       color: yellow;
+     }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>FOUT on first load - hidden with CSS</li>
+      <li>No inline font on top - Google Font from Google CDN with preconnect, dns-prefetch, browser cache and user-agent detection</li>
+      <li>CSS from Google cached with AppCache (manifest)</li>
+      <li>Use Service Workers with supporting browsers Chrome 49+, Firefox 44+</li>
+    </ul>
+    <div class="fold">Fold</div>
+    <div class="fold2">Fold</div>    
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1 class="yell">test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <h1>test bonbon</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
+    <script>
+
+     // Service Worker registration
+     
+     if('serviceWorker' in navigator) {
+       navigator.serviceWorker
+		.register('sw.js')
+		.then(function(reg) { console.log("Service Worker Registered" + reg.scope); });
+       
+       navigator.serviceWorker.ready.then(function(registration) { 
+         console.log("Service Worker Ready");
+       });
+     }
+
+     // Google Analytics -> @TODO make this working offline
+     
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+     
+     ga('create', 'UA-59325548-2', 'auto');
+     ga('send', 'pageview');
+
+     // WebFontLoader
+     
+     WebFont.load({
+       google: {
+	 families: ['Bonbon']
+       }
+     });
+    </script>
+  </body>
+</html>
